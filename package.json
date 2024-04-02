@@ -1,12 +1,12 @@
 {
-  "name": "language-abc",
+  "name": "abc-lang-pulsar",
   "version": "0.0.0",
-  "description": "A short description of your language package",
+  "description": "A Better C",
   "keywords": [
     "language",
     "grammar"
   ],
-  "repository": "https://github.com/atom/language-abc",
+  "repository": "https://github.com/michael-lehn/abc-lang-pulsar",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
