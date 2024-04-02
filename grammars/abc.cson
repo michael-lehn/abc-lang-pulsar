@@ -1,0 +1,93 @@
+# If this is your first time writing a language grammar, check out:
+#   - https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
+
+# based on snippets taken from:
+# https://github.com/atom/language-c/blob/master/grammars/c.cson
+#
+
+'scopeName': 'source.abc'
+'name': 'Abc'
+'fileTypes': [
+  'abc'
+  'hdr'
+]
+'patterns': [
+    {
+        'match': '//.*$'
+        'name': 'comment'
+    }
+    {
+        'match': '@.*$'
+        'name': 'keyword.control.directive.define.c'
+    }
+    {
+        'begin': '/\\*'
+        'end': '\\*/'
+        'name': 'comment'
+    }
+    {
+        'match': '\\b(fn|assert|if|for|do|while|goto|switch)\\b'
+        'name': 'keyword'
+    }
+    {
+        'match': '\\b(continue|break|label|local|global|extern|case|default)\\b'
+        'name': 'keyword'
+    }
+    {
+        'match': '\\b(int|i8|i16|i32|i64|ptrdiff_t)\\b'
+        'name': 'support.type.stdint.c'
+    }
+    {
+        'match': '\\b(unsigned|u8|u16|u32|u64|size_t)\\b'
+        'name': 'support.type.stdint.c'
+    }
+    {
+        'begin': '"'
+        'beginCaptures':
+            '0':
+                'name': 'punctuation.definition.string.begin.c'
+        'end': '"'
+        'endCaptures':
+            '0':
+                'name': 'punctuation.definition.string.end.c'
+        'name': 'string.quoted.double.c'
+        'patterns': [
+            {
+                'include': '#string_escaped_char'
+            }
+            {
+                'include': '#string_placeholder'
+            }
+            {
+                'include': '#line_continuation_character'
+            }
+        ]
+    }
+    {
+        'begin': '\''
+        'beginCaptures':
+            '0':
+                'name': 'punctuation.definition.string.begin.c'
+        'end': '\''
+        'endCaptures':
+            '0':
+                'name': 'punctuation.definition.string.end.c'
+        'name': 'string.quoted.single.c'
+        'patterns': [
+            {
+                'include': '#string_escaped_char'
+            }
+            {
+                'include': '#line_continuation_character'
+            }
+        ]
+    }
+    {
+        'match': '\\b(true|false|stdin|stdout|stderr)\\b'
+        'name': 'constant.language.c'
+    }
+    {
+        'match': '\\b((0(x|X)[0-9a-fA-F]([0-9a-fA-F\']*[0-9a-fA-F])?)|(0(b|B)[01]([01\']*[01])?)|(([0-9]([0-9\']*[0-9])?\\.?[0-9]*([0-9\']*[0-9])?)|(\\.[0-9]([0-9\']*[0-9])?))((e|E)(\\+|-)?[0-9]([0-9\']*[0-9])?)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b'
+        'name': 'constant.numeric.c'
+    }
+]
