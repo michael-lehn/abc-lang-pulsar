@@ -1,3 +1,3 @@
 # Abc language package
 
-A short description of your language package.
+Support for the [ABC Programming Language](https://github.com/michael-lehn/abc-llvm)
