@@ -9,6 +9,6 @@
   "repository": "https://github.com/michael-lehn/abc-lang-pulsar",
   "license": "GPL 3",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+       "atom": ">=1.0.0 <2.0.0"
   }
 }
