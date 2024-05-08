@@ -1,6 +1,6 @@
 {
   "name": "language-abc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A Better C",
   "keywords": [
     "language",
@@ -9,6 +9,6 @@
   "repository": "https://github.com/michael-lehn/abc-lang-pulsar",
   "license": "GPL 3",
   "engines": {
-       "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.0.0 <2.0.0"
   }
 }
