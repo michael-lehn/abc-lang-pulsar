@@ -16,6 +16,8 @@
         'match': '//.*$'
         'name': 'comment'
     }
+  # body...
+
     {
         'match': '@.*$'
         'name': 'keyword.control.directive.define.c'
@@ -26,19 +28,35 @@
         'name': 'comment'
     }
     {
-        'match': '\\b(fn|assert|if|for|do|while|goto|switch)\\b'
+        'match': '\\b(foo|array|assert|break|case|const|continue)\\b'
         'name': 'keyword'
     }
     {
-        'match': '\\b(continue|break|label|local|global|extern|case|default)\\b'
+        'match': '\\b(default|do|else|enum|extern|fn|for|global)\\b'
         'name': 'keyword'
     }
     {
-        'match': '\\b(int|i8|i16|i32|i64|ptrdiff_t)\\b'
+        'match': '\\b(static|goto|if|label|local|nullptr|of|return)\\b'
+        'name': 'keyword'
+    }
+    {
+        'match': '\\b(sizeof|struct|switch|then|type|union|while)\\b'
+        'name': 'keyword'
+    }
+    {
+        'match': '\\b(void|float|double|bool|char|int|unsigned)\\b'
         'name': 'support.type.stdint.c'
     }
     {
-        'match': '\\b(unsigned|u8|u16|u32|u64|size_t)\\b'
+        'match': '\\b(long|size_t|ptrdiff_t)\\b'
+        'name': 'support.type.stdint.c'
+    }
+    {
+        'match': '\\b(i8|i16|i32|i64)\\b'
+        'name': 'support.type.stdint.c'
+    }
+    {
+        'match': '\\b(u8|u16|u32|u64)\\b'
         'name': 'support.type.stdint.c'
     }
     {
